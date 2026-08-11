@@ -1,0 +1,138 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #002f6c, #001838);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 5px solid #ffcc00;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+/* Layout Principal */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Cards de Conteúdo */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    color: #002f6c;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #002f6c;
+    padding-bottom: 0.5rem;
+}
+
+/* Estilização da Biografia (Imagem + Texto) */
+.bio-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap; /* Garante que fique em uma coluna no celular */
+}
+
+.foto-jogador {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #002f6c;
+}
+
+.texto-bio {
+    flex: 1;
+    min-width: 280px;
+}
+
+.texto-bio p {
+    margin-bottom: 1rem;
+}
+
+/* Containers de Mídia (Áudio e Vídeo) */
+.media-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+audio {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Vídeo Responsivo */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-responsive iframe, 
+.video-responsive video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+/* Responsividade Básica para Telas Pequenas */
+@media (max-width: 600px) {
+    .bio-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
